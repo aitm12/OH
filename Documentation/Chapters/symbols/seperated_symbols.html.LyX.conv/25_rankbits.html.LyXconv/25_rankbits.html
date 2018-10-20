@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="25_rankbits.tex"> 
+<link rel="stylesheet" type="text/css" href="25_rankbits.css"> 
+</head><body 
+>
+   <h3 class="sectionHead"><a 
+ id="x1-1000"></a>Rank Bits </h3>
+<!--l. 29--><p class="noindent" >Please note: aces are both hi and lo.
+
+   <div class="tabular"> <table id="TBL-1" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col 
+id="TBL-1-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-1"  
+class="td11"> <!--l. 33--><p class="noindent" >Symbol                              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-2"  
+class="td11"> <!--l. 34--><p class="noindent" >Meaning                                                            </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-1"  
+class="td11"> <!--l. 37--><p class="noindent" >rankbits                              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-2"  
+class="td11"> <!--l. 38--><p class="noindent" >bit
+  list
+  of
+  card
+  ranks
+  (yours
+  and
+  commons)                                                          </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-1"  
+class="td11"> <!--l. 40--><p class="noindent" >rankbitscommon                   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-2"  
+class="td11"> <!--l. 41--><p class="noindent" >bit
+  list
+  of
+  card
+  ranks
+  (commons)                                                         </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-4-1"  
+class="td11"> <!--l. 43--><p class="noindent" >rankbitsplayer                      </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-4-2"  
+class="td11"> <!--l. 44--><p class="noindent" >bit
+  list
+  of
+  card
+  ranks
+  (yours)                                                              </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-5-1"  
+class="td11"> <!--l. 46--><p class="noindent" >rankbitspoker                      </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-5-2"  
+class="td11"> <!--l. 47--><p class="noindent" >bit
+  list
+  of
+  card
+  ranks
+  (pokerval)                                                          </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-6-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-6-1"  
+class="td11"> <!--l. 49--><p class="noindent" >srankbits                            </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-6-2"  
+class="td11"> <!--l. 50--><p class="noindent" >bit
+  list
+  of
+  suited
+  card
+  ranks
+  (yours
+  and
+  commons
+  tsuit)                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-7-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-7-1"  
+class="td11"> <!--l. 52--><p class="noindent" >srankbitscommon                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-7-2"  
+class="td11"> <!--l. 53--><p class="noindent" >bit
+  list
+  of
+  suited
+  card
+  ranks
+  (commons
+  tsuitcommon)                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-8-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-8-1"  
+class="td11"> <!--l. 55--><p class="noindent" >srankbitsplayer                    </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-8-2"  
+class="td11"> <!--l. 56--><p class="noindent" >bit
+  list
+  of
+  suited
+  card
+  ranks
+  (yours
+  tsuit)                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-9-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-9-1"  
+class="td11"> <!--l. 58--><p class="noindent" >srankbitspoker                     </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-9-2"  
+class="td11"> <!--l. 59--><p class="noindent" >bit
+  list
+  of
+  suited
+  card
+  ranks
+  (pokerval
+  tsuit)                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-10-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-10-1"  
+class="td11"> <!--l. 61--><p class="noindent" >suitbitsplayerN                    </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-10-2"  
+class="td11"> <!--l. 62--><p class="noindent" >bit
+  list
+  of
+  card
+  ranks(yours)
+  for
+  suit
+  N
+  (N
+  =
+  0..3),
+  especially
+  meant
+  for
+  Omaha                                                              </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-11-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-11-1"  
+class="td11"> <!--l. 65--><p class="noindent" >suitbitscommonN                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-11-2"  
+class="td11"> <!--l. 66--><p class="noindent" >bit
+  list
+  of
+  card
+  ranks(common)
+  for
+  suit
+  N
+  (N
+  =
+  0..3),
+  especially
+  meant
+  for
+  Omaha                                                              </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-12-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-12-1"  
+class="td11">                           </td> </tr></table>
+
+</div>  
+</body></html> 
+
+
+

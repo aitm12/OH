@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="19_players_and_opponents.tex"> 
+<link rel="stylesheet" type="text/css" href="19_players_and_opponents.css"> 
+</head><body 
+>
+   <h3 class="sectionHead"><a 
+ id="x1-1000"></a>Players, Opponents</h3>
+<!--l. 29--><p class="noindent" >Note that &#8220;raising players&#8221; does no longer count the so-called &#8220;blind-raisers&#8221; (former
+WinHoldem definition).
+
+   <div class="tabular"> <table id="TBL-1" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col 
+id="TBL-1-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-1"  
+class="td11"> <!--l. 34--><p class="noindent" >Symbol                              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-2"  
+class="td11"> <!--l. 35--><p class="noindent" >Meaning                                                            </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-1"  
+class="td11"> <!--l. 38--><p class="noindent" >maxnplayersdealt                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-2"  
+class="td11"> <!--l. 39--><p class="noindent" >maximum
+  number
+  of
+  dealt
+  players
+  seen
+  in
+  this
+  session.
+  <!--l. 41--><p class="noindent" >Especially
+  meant
+  to
+  distinguish
+  certain
+  gametypes
+  (FR
+  /
+  SH
+  /
+  HU)
+  in
+  tournaments.
+  The
+  alternative
+  symbol
+  nchairs
+  is
+  only
+  partially
+  suitable
+  as
+  it
+  depends
+  only
+  on
+  the
+  tablemap
+  shich
+  might
+  fit
+  to
+  multiple
+  gametypes.                                                         </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-1"  
+class="td11"> <!--l. 45--><p class="noindent" >nplayersseated                     </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-2"  
+class="td11"> <!--l. 46--><p class="noindent" >number
+  of
+  players
+  seated
+  (including
+  you)
+  (0-10)                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-4-1"  
+class="td11"> <!--l. 48--><p class="noindent" >nplayersactive                      </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-4-2"  
+class="td11"> <!--l. 49--><p class="noindent" >number
+  of
+  players
+  active
+  (including
+  you)
+  (0-10)                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-5-1"  
+class="td11"> <!--l. 51--><p class="noindent" >nplayersdealt                       </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-5-2"  
+class="td11"> <!--l. 52--><p class="noindent" >number
+  of
+  players
+  dealt
+  (including
+  you)
+  (0-10)                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-6-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-6-1"  
+class="td11"> <!--l. 54--><p class="noindent" >nplayersplaying                    </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-6-2"  
+class="td11"> <!--l. 55--><p class="noindent" >number
+  of
+  players
+  playing
+  (including
+  you)
+  (0-10)                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-7-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-7-1"  
+class="td11"> <!--l. 57--><p class="noindent" >nfriendsseated                      </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-7-2"  
+class="td11"> <!--l. 58--><p class="noindent" >1
+  if
+  you
+  are
+  seated,
+  0
+  otherwise
+  (0-1)                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-8-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-8-1"  
+class="td11"> <!--l. 60--><p class="noindent" >nopponentsseated                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-8-2"  
+class="td11"> <!--l. 61--><p class="noindent" >number
+  of
+  opponents
+  seated
+  (not
+  including
+  you)
+  (0-9)                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-9-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-9-1"  
+class="td11"> <!--l. 63--><p class="noindent" >nopponentsactive                  </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-9-2"  
+class="td11"> <!--l. 64--><p class="noindent" >number
+  of
+  opponents
+  active
+  (not
+  including
+  you)
+  (0-9)                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-10-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-10-1"  
+class="td11"> <!--l. 66--><p class="noindent" >nopponentsdealt                   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-10-2"  
+class="td11"> <!--l. 67--><p class="noindent" >number
+  of
+  opponents
+  dealt
+  (not
+  including
+  you)
+  (0-9)                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-11-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-11-1"  
+class="td11"> <!--l. 69--><p class="noindent" >nopponentsplaying                </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-11-2"  
+class="td11"> <!--l. 70--><p class="noindent" >number
+  of
+  opponents
+  playing
+  (not
+  including
+  you)
+  (0-9)                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-12-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-12-1"  
+class="td11"> <!--l. 72--><p class="noindent" >nopponentschecking              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-12-2"  
+class="td11"> <!--l. 73--><p class="noindent" >number
+  of
+  opponents
+  playing
+  with
+  a
+  zero
+  current
+  bet
+  equal
+  to
+  the
+  previous
+  bettor
+  (0-9)                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-13-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-13-1"  
+class="td11"> <!--l. 76--><p class="noindent" >nopponentscalling                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-13-2"  
+class="td11"> <!--l. 77--><p class="noindent" >number
+  of
+  opponents
+  playing
+  with
+  a
+  non-zero
+  current
+  bet
+  equal
+  to
+  the
+  previous
+  bettor
+  (0-9)                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-14-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-14-1"  
+class="td11"> <!--l. 80--><p class="noindent" >nopponentstruelyraising         </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-14-2"  
+class="td11"> <!--l. 81--><p class="noindent" >number
+  of
+  opponents
+  playing
+  with
+  a
+  current
+  bet
+  greater
+  than
+  the
+  previous
+  bettor
+  (0-9).
+  This
+  symbol
+  counts
+  only
+  people
+  who
+  are
+  truely
+  raising,
+  e,g,
+  more
+  than
+  a
+  big-blind
+  preflop.
+  It
+  does
+  not
+  count
+  people
+  posting
+  antes
+  or
+  blinds
+  like
+  the
+  former
+  WinHoldem
+  symbol
+  &#8220;nopponentsraising&#8221;,
+  Also
+  counts
+  the
+  first
+  better
+  postflop.                                                            </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-15-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-15-1"  
+class="td11"> <!--l. 87--><p class="noindent" >nopponentsbetting                </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-15-2"  
+class="td11"> <!--l. 88--><p class="noindent" >number
+  of
+  opponents
+  playing
+  with
+  a
+  non
+  zero
+  current
+  bet
+  (0-9)                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-16-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-16-1"  
+class="td11"> <!--l. 90--><p class="noindent" >nopponentsfolded                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-16-2"  
+class="td11"> <!--l. 91--><p class="noindent" >number
+  of
+  opponents
+  that
+  have
+  folded
+  this
+  hand
+  (0-9)                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-17-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-17-1"  
+class="td11"> <!--l. 93--><p class="noindent" >nplayerscallshort                  </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-17-2"  
+class="td11"> <!--l. 94--><p class="noindent" >number
+  of
+  players
+  that
+  must
+  call
+  to
+  stay
+  in
+  the
+  hand                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-18-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-18-1"  
+class="td11"> <!--l. 96--><p class="noindent" >nchairsdealtleft                    </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-18-2"  
+class="td11"> <!--l. 97--><p class="noindent" >number
+  of
+  chairs
+  dealt
+  after
+  your
+  chair,
+  up
+  to
+  and
+  including
+  the
+  dealer,
+  but
+  not
+  the
+  blinds.                                                               </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-19-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-19-1"  
+class="td11"> <!--l. 100--><p class="noindent" >nchairsdealtright                  </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-19-2"  
+class="td11"> <!--l. 101--><p class="noindent" >number
+  of
+  chairs
+  dealt
+  before
+  your
+  chair,
+  including
+  the
+  blinds                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-20-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-20-1"  
+class="td11"> <!--l. 103--><p class="noindent" >playersseatedbits                  </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-20-2"  
+class="td11"> <!--l. 104--><p class="noindent" >bits
+  9-0:
+  1=seated
+  0=unseated                                                        </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-21-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-21-1"  
+class="td11"> <!--l. 106--><p class="noindent" >playersactivebits                   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-21-2"  
+class="td11"> <!--l. 107--><p class="noindent" >bits
+  9-0:
+  1=active
+  0=inactive                                                          </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-22-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-22-1"  
+class="td11"> <!--l. 109--><p class="noindent" >playersdealtbits                    </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-22-2"  
+class="td11"> <!--l. 110--><p class="noindent" >bits
+  9-0:
+  1=dealt
+  0=notdealt                                                         </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-23-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-23-1"  
+class="td11"> <!--l. 112--><p class="noindent" >playersplayingbits                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-23-2"  
+class="td11"> <!--l. 113--><p class="noindent" >bits
+  9-0:
+  1=playing
+  0=notplaying                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-24-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-24-1"  
+class="td11"> <!--l. 115--><p class="noindent" >opponentsseatedbits              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-24-2"  
+class="td11"> <!--l. 116--><p class="noindent" >bits
+  9-0:
+  1=seated
+  0=unseated                                                        </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-25-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-25-1"  
+class="td11"> <!--l. 118--><p class="noindent" >opponentsactivebits              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-25-2"  
+class="td11"> <!--l. 119--><p class="noindent" >bits
+  9-0:
+  1=active
+  0=inactive                                                          </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-26-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-26-1"  
+class="td11"> <!--l. 121--><p class="noindent" >opponentsdealtbits                </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-26-2"  
+class="td11"> <!--l. 122--><p class="noindent" >bits
+  9-0:
+  1=dealt
+  0=notdealt                                                         </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-27-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-27-1"  
+class="td11"> <!--l. 124--><p class="noindent" >opponentsplayingbits             </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-27-2"  
+class="td11"> <!--l. 125--><p class="noindent" >bits
+  9-0:
+  1=playing
+  0=notplaying                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-28-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-28-1"  
+class="td11">                           </td> </tr></table>
+
+</div>  
+</body></html> 
+
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="16_hand_and_board-expressions.tex"> 
+<link rel="stylesheet" type="text/css" href="16_hand_and_board-expressions.css"> 
+</head><body 
+>
+   <h3 class="sectionHead"><a 
+ id="x1-1000"></a>Hand and Board-Expressions</h3>
+   <div class="tabular"> <table id="TBL-1" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col 
+id="TBL-1-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-1"  
+class="td11"> <!--l. 34--><p class="noindent" >hand$XYZ                    </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-2"  
+class="td11"> <!--l. 35--><p class="noindent" >true,
+  if
+  your
+  hand
+  contains
+  XYZ.
+  The
+  expression
+  may
+  contain
+  1
+  or
+  2
+  cards,
+  optionally
+  concrete
+  suits
+  or
+  optionally
+  the
+  postfix
+  &#8220;Suited&#8221;.                                                       </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-1"  
+class="td11"> <!--l. 38--><p class="noindent" >board$XYZ                   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-2"  
+class="td11"> <!--l. 39--><p class="noindent" >true,
+  The
+  expression
+  may
+  contain
+  1
+  up
+  to
+  5
+  cards,
+  optionally
+  concrete
+  suits
+  or
+  optionally
+  the
+  postfix
+  &#8220;Suited&#8221;.                                                       </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-1"  
+class="td11">                       </td> </tr></table></div>
+<!--l. 44--><p class="noindent" >Hand and board expressions got implemented for OpenPPL, but of course they can be
+also used for OH-script. Especially board-expressions are in most cases more intuitive
+than rankbits(common). Some examples for hand and board-expressions (OpenPPL)
+<!--l. 48-->
+   <div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x1-1001r1"></a></span>WHEN&#x00A0;hand$AA&#x00A0;RaiseMax&#x00A0;FORCE&#x00A0;<br /><span class="label"><a 
+ id="x1-1002r2"></a></span>WHEN&#x00A0;hand$AKSuited&#x00A0;RaisePot&#x00A0;FORCE&#x00A0;<br /><span class="label"><a 
+ id="x1-1003r3"></a></span>//&#x00A0;We&#x00A0;love&#x00A0;playing&#x00A0;hearts...&#x00A0;<br /><span class="label"><a 
+ id="x1-1004r4"></a></span>WHEN&#x00A0;hand$Ah&#x00A0;Call&#x00A0;FORCE&#x00A0;<br /><span class="label"><a 
+ id="x1-1005r5"></a></span>//&#x00A0;...but&#x00A0;fear&#x00A0;the&#x00A0;devil&#x00A0;<br /><span class="label"><a 
+ id="x1-1006r6"></a></span>WHEN&#x00A0;board$666&#x00A0;Fold&#x00A0;FORCE
+
+   </div>
+    
+</body></html> 
+
+
+

@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="31_history.tex"> 
+<link rel="stylesheet" type="text/css" href="31_history.css"> 
+</head><body 
+>
+   <h3 class="sectionHead"><a 
+ id="x1-1000"></a>History (I)</h3>
+   <div class="newtheorem">
+<!--l. 35--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1001r1"></a>
+  <span 
+class="eccc1000-"><span 
+class="small-caps">r</span><span 
+class="small-caps">e</span><span 
+class="small-caps">m</span><span 
+class="small-caps">a</span><span 
+class="small-caps">r</span><span 
+class="small-caps">k</span> </span>1<span 
+class="eccc1000-"><span 
+class="small-caps">.</span></span>  </span>The  action-symbols  (didrais,  didcall,  etc.)  mean:  what  the
+autoplayer  did,  not  what  the  user  did  or  what  happened  in  the  hand.  That
+does regularly confuse new users and causes problem when simulating hands at
+ManualMode or with Replay Frames.
+   </div>
+
+   <div class="tabular"> <table id="TBL-1" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col 
+id="TBL-1-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-1"  
+class="td11"> <!--l. 44--><p class="noindent" >Symbol                              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-2"  
+class="td11"> <!--l. 45--><p class="noindent" >Meaning                                                            </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-1"  
+class="td11"> <!--l. 48--><p class="noindent" >nplayersround1..nplayersround4 </td> <td  style="white-space:wrap; text-align:left;" id="TBL-1-2-2"  
+class="td11"> <!--l. 49--><p class="noindent" >number
+  of
+  players
+  that
+  began
+  betting
+  round
+  1
+  -
+  round
+  4                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-1"  
+class="td11"> <!--l. 51--><p class="noindent" >nplayersround                      </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-2"  
+class="td11"> <!--l. 52--><p class="noindent" >number
+  of
+  players
+  that
+  began
+  the
+  current
+  betting
+  round                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-4-1"  
+class="td11"> <!--l. 54--><p class="noindent" >prevaction                           </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-4-2"  
+class="td11"> <!--l. 55--><p class="noindent" >record of previously attempted autoplayer action.
+                   <dl class="description"><dt class="description">
+          <span 
+class="ecbx-1000">-2:</span> </dt><dd 
+class="description">
+            =
+              prefold
+                   </dd><dt class="description">
+          <span 
+class="ecbx-1000">-1:</span> </dt><dd 
+class="description">
+            =
+              fold
+                   </dd><dt class="description">
+          <span 
+class="ecbx-1000">0:</span> </dt><dd 
+class="description">
+            =
+              check
+                   </dd><dt class="description">
+          <span 
+class="ecbx-1000">1:</span> </dt><dd 
+class="description">
+            =
+              call
+                   </dd><dt class="description">
+          <span 
+class="ecbx-1000">2:</span> </dt><dd 
+class="description">
+            =
+              raise
+                   </dd><dt class="description">
+          <span 
+class="ecbx-1000">3:</span> </dt><dd 
+class="description">
+            =
+              betsize
+                   </dd><dt class="description">
+          <span 
+class="ecbx-1000">4:</span> </dt><dd 
+class="description">
+            =
+              allin</dd></dl>
+  <!--l. 66--><p class="noindent" >                                                                        </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-5-1"  
+class="td11"> <!--l. 67--><p class="noindent" >didfold                               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-5-2"  
+class="td11"> <!--l. 68--><p class="noindent" >the
+  number
+  of
+  times
+  the
+  autoplayer
+  has
+  attempted
+  to
+  fold
+  during
+  the
+  current
+  round                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-6-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-6-1"  
+class="td11"> <!--l. 71--><p class="noindent" >didchec                               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-6-2"  
+class="td11"> <!--l. 72--><p class="noindent" >the
+  number
+  of
+  times
+  the
+  autoplayer
+  has
+  checked
+  during
+  the
+  current
+  round                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-7-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-7-1"  
+class="td11"> <!--l. 75--><p class="noindent" >didcall                                </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-7-2"  
+class="td11"> <!--l. 76--><p class="noindent" >the
+  number
+  of
+  times
+  the
+  autoplayer
+  has
+  called
+  during
+  the
+  current
+  round                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-8-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-8-1"  
+class="td11"> <!--l. 78--><p class="noindent" >didrais                               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-8-2"  
+class="td11"> <!--l. 79--><p class="noindent" >the
+  number
+  of
+  times
+  the
+  autoplayer
+  has
+  raised
+  during
+  the
+  current
+  round,
+  i.e
+  clicked
+  the
+  min-raise-button                                                  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-9-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-9-1"  
+class="td11"> <!--l. 82--><p class="noindent" >didbetsize                           </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-9-2"  
+class="td11"> <!--l. 83--><p class="noindent" >the
+  number
+  of
+  times
+  the
+  autoplayer
+  has
+  betsized
+  during
+  the
+  current
+  round,
+  i.e.
+  used
+  f$betsize
+  or
+  one
+  of
+  the
+  betpot-functions                                                  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-10-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-10-1"  
+class="td11"> <!--l. 86--><p class="noindent" >didalli                                </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-10-2"  
+class="td11"> <!--l. 87--><p class="noindent" >the
+  number
+  of
+  times
+  the
+  autoplayer
+  has
+  attempted
+  to
+  went
+  allin
+  during
+  the
+  current
+  round                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-11-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-11-1"  
+class="td11"> <!--l. 90--><p class="noindent" >nbetsround1..nbetsround4      </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-11-2"  
+class="td11"> <!--l. 91--><p class="noindent" >the
+  largest
+  number
+  of
+  bets
+  in
+  front
+  of
+  any
+  player
+  during
+  round
+  1-
+  round
+  4                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-12-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-12-1"  
+class="td11"> <!--l. 94--><p class="noindent" >nbetsround                          </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-12-2"  
+class="td11"> <!--l. 95--><p class="noindent" >the
+  largest
+  number
+  of
+  bets
+  in
+  front
+  of
+  any
+  player
+  right
+  now                                                                  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-13-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-13-1"  
+class="td11"> <!--l. 97--><p class="noindent" >didfoldround1..didfoldround4  </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-13-2"  
+class="td11"> <!--l. 98--><p class="noindent" >true
+  if
+  userchair
+  folded
+  during
+  round
+  1
+  -
+  round
+  4                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-14-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-14-1"  
+class="td11"> <!--l. 100--><p class="noindent" >didchecround1..didchecround4 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-14-2"  
+class="td11"> <!--l. 101--><p class="noindent" >true
+  if
+  userchair
+  checked
+  during
+  round
+  1
+  -
+  round
+  4                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-15-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-15-1"  
+class="td11"> <!--l. 103--><p class="noindent" >didcallround1..didcallround4   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-15-2"  
+class="td11"> <!--l. 104--><p class="noindent" >true
+  if
+  userchair
+  called
+  during
+  round
+  1
+  -
+  round
+  4                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-16-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-16-1"  
+class="td11"> <!--l. 106--><p class="noindent" >didraisround1..didraisround4   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-16-2"  
+class="td11"> <!--l. 107--><p class="noindent" >true
+  if
+  userchair
+  raised
+  during
+  round
+  1
+  -
+  round
+  4                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-17-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-17-1"  
+class="td11"> <!--l. 109--><p class="noindent" >didbetsizeround1..didbetsizeround4 </td> <td  style="white-space:wrap; text-align:left;" id="TBL-1-17-2"  
+class="td11"> <!--l. 110--><p class="noindent" >true
+  if
+  userchair
+  betsized
+  during
+  round
+  1
+  -
+  round
+  4                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-18-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-18-1"  
+class="td11"> <!--l. 112--><p class="noindent" >didalliround1..didalliround4    </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-18-2"  
+class="td11"> <!--l. 113--><p class="noindent" >true
+  if
+  userchair
+  went
+  allin
+  during
+  round
+  1
+  -
+  round
+  4                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-19-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-19-1"  
+class="td11">                           </td> </tr></table>
+
+</div>
+   <h3 class="sectionHead"><a 
+ id="x1-2000"></a>History (II)</h3>
+<!--l. 119--><p class="noindent" >hi_&#x003C;sym&#x003E;x (x=1-4) the value of the symbol &#x003C;sym&#x003E; as of your last turn in
+betting round x. Example: hi_prwin1 would return prwin as of your last turn in
+br1.
+<!--l. 123--><p class="indent" >   Valid values for &#x003C;sym&#x003E; are:
+
+   <div class="tabular"> <table id="TBL-2" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1"></colgroup><colgroup id="TBL-2-2g"><col 
+id="TBL-2-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="white-space:wrap; text-align:left;" id="TBL-2-1-1"  
+class="td11"> <!--l. 127--><p class="noindent" >PROBABILITIES               </td><td  style="white-space:wrap; text-align:left;" id="TBL-2-1-2"  
+class="td11"> <!--l. 128--><p class="noindent" >prwin,
+  prlos,
+  prtie                                                                  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="white-space:wrap; text-align:left;" id="TBL-2-2-1"  
+class="td11"> <!--l. 130--><p class="noindent" >CHIP
+  AMOUNTS                         </td><td  style="white-space:wrap; text-align:left;" id="TBL-2-2-2"  
+class="td11"> <!--l. 131--><p class="noindent" >balance..balance9
+  <!--l. 133--><p class="noindent" >stack0..stack9                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="white-space:wrap; text-align:left;" id="TBL-2-3-1"  
+class="td11"> <!--l. 135--><p class="noindent" >POKER
+  VALUES                            </td><td  style="white-space:wrap; text-align:left;" id="TBL-2-3-2"  
+class="td11"> <!--l. 136--><p class="noindent" >pokerval,
+  pokervalplayer,
+  pokervalcommon,
+  pcbits,
+  npcbits                                                              </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="white-space:wrap; text-align:left;" id="TBL-2-4-1"  
+class="td11"> <!--l. 138--><p class="noindent" >HAND
+  TESTS                               </td><td  style="white-space:wrap; text-align:left;" id="TBL-2-4-2"  
+class="td11"> <!--l. 139--><p class="noindent" >ishandup,
+  ishandupcommon,
+  ishicard,
+  isonepair,
+  istwopair,
+  isthreeofakind,
+  isstraight,
+  isflush,
+  isfullhouse,
+  isfourofakind,
+  isstraightflush,
+  isroyalflush,
+  isfiveofakind                                                        </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="white-space:wrap; text-align:left;" id="TBL-2-5-1"  
+class="td11"> <!--l. 143--><p class="noindent" >POCKET/COMMON
+  TESTS                               </td><td  style="white-space:wrap; text-align:left;" id="TBL-2-5-2"  
+class="td11"> <!--l. 144--><p class="noindent" >ishipair,
+  islopair,
+  ismidpair,
+  ishistraight,
+  ishiflush                                                             </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-6-"><td  style="white-space:wrap; text-align:left;" id="TBL-2-6-1"  
+class="td11"> <!--l. 146--><p class="noindent" >(UN)KNOWN
+  CARDS                              </td><td  style="white-space:wrap; text-align:left;" id="TBL-2-6-2"  
+class="td11"> <!--l. 147--><p class="noindent" >nouts,
+  ncardsbetter                                                       </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-7-"><td  style="white-space:wrap; text-align:left;" id="TBL-2-7-1"  
+class="td11"> <!--l. 149--><p class="noindent" >NHANDS                           </td><td  style="white-space:wrap; text-align:left;" id="TBL-2-7-2"  
+class="td11"> <!--l. 150--><p class="noindent" >nhands,
+  nhandshi,
+  nhandslo,
+  nhandsti,
+  prwinnow,
+  prlosnow                                                            </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-8-"><td  style="white-space:wrap; text-align:left;" id="TBL-2-8-1"  
+class="td11"> <!--l. 152--><p class="noindent" >FLUSHES
+  SETS
+  STRAIGHTS                      </td><td  style="white-space:wrap; text-align:left;" id="TBL-2-8-2"  
+class="td11"> <!--l. 153--><p class="noindent" >nsuited,
+  nsuitedcommon,
+  tsuit,
+  tsuitcommon,
+  nranked,
+  nrankedcommon,
+  trank,
+  trankcommon,
+  nstraight,
+  nstraightcommon,
+  nstraightfill,
+  nstraightfillcommon,
+  nstraightflush,
+  nstraightflushcommon,
+  nstraightflushfill,
+  nstraightflushfillcommon                                       </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-9-"><td  style="white-space:wrap; text-align:left;" id="TBL-2-9-1"  
+class="td11"> <!--l. 157--><p class="noindent" >RANK
+  BITS                                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-2-9-2"  
+class="td11"> <!--l. 158--><p class="noindent" >rankbits,
+  rankbitscommon,
+  rankbitsplayer,
+  rankbitspoker,
+  srankbits,
+  srankbitscommon,
+  srankbitsplayer,
+  srankbitspoker                                                     </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-10-"><td  style="white-space:wrap; text-align:left;" id="TBL-2-10-1"  
+class="td11"> <!--l. 161--><p class="noindent" >RANK
+  HI                                     </td><td  style="white-space:wrap; text-align:left;" id="TBL-2-10-2"  
+class="td11"> <!--l. 162--><p class="noindent" >rankhi,
+  rankhicommon,
+  rankhiplayer,
+  rankhipoker,
+  srankhi,
+  srankhicommon,
+  srankhiplayer,
+  srankhipoker                                                       </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-11-"><td  style="white-space:wrap; text-align:left;" id="TBL-2-11-1"  
+class="td11"> <!--l. 165--><p class="noindent" >RANK
+  LO                                    </td><td  style="white-space:wrap; text-align:left;" id="TBL-2-11-2"  
+class="td11"> <!--l. 166--><p class="noindent" >ranklo,
+  ranklocommon,
+  rankloplayer,
+  ranklopoker,
+  sranklo,
+  sranklocommon,
+  srankloplayer,
+  sranklopoker                                                       </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-12-"><td  style="white-space:wrap; text-align:left;" id="TBL-2-12-1"  
+class="td11">                           </td> </tr></table>
+
+</div>  
+</body></html> 
+
+
+

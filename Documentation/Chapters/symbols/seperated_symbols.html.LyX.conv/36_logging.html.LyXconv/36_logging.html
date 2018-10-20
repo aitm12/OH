@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="36_logging.tex"> 
+<link rel="stylesheet" type="text/css" href="36_logging.css"> 
+</head><body 
+>
+   <h3 class="sectionHead"><a 
+ id="x1-1000"></a>Logging </h3>
+   <div class="tabular"> <table id="TBL-1" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col 
+id="TBL-1-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-1"  
+class="td11"> <!--l. 38--><p class="noindent" >Symbol                              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-2"  
+class="td11"> <!--l. 39--><p class="noindent" >Meaning                                                            </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-1"  
+class="td11"> <!--l. 42--><p class="noindent" >log$YourTextGoesHere          </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-2"  
+class="td11"> <!--l. 43--><p class="noindent" >When
+  executed,
+  adds
+  your
+  specified
+  text
+  to
+  the
+  autoplayer-trace
+  and
+  to
+  the
+  white
+  box
+  in
+  the
+  GUI.
+  <!--l. 46--><p class="noindent" >The
+  symbol
+  will
+  be
+  evaluated
+  to
+  1.                                                                     </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-1"  
+class="td11">                           </td> </tr></table></div>
+<!--l. 50--><p class="noindent" >For example if you have the following f$rais-formula,
+   <!--l. 52-->
+   <div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x1-1001r1"></a></span>##f$rais##&#x00A0;<br /><span class="label"><a 
+ id="x1-1002r2"></a></span>[&#x00A0;betround&#x00A0;==&#x00A0;2&#x00A0;&amp;&amp;&#x00A0;(nsuited&#x00A0;==&#x00A0;3&#x00A0;||&#x00A0;nstraight&#x00A0;==&#x00A0;3)&#x00A0;&amp;&amp;&#x00A0;log$ItLives&#x00A0;]
+   </div>
+<!--l. 57--><p class="indent" >   and you flop a backdoor flush draw, then OpenHoldem will raise and also add the
+text "ItLives" to the log file, just before the RAIS line. Everytime a log$ symbol is
+accessed it will be flagged for logging. You can use this to track which part of your
+formula is to blame for the action taken by OpenHoldem.
+<!--l. 63--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+
+
+<!--l. 64--><p class="noindent" ><img 
+src="36_logging0x.png" alt="PIC" class="graphics"><!--tex4ht:graphics  
+name="36_logging0x.png" src="0C__Users_tiltmonster_Documents_openholdembot-m___ntation_Chapters_symbols_Images_log__symbol.JPG"  
+-->
+
+<!--l. 65--><p class="indent" >   </div><hr class="endfigure">
+   <div class="newtheorem">
+<!--l. 66--><p class="noindent" ><span class="head">
+  <span 
+class="eccc1000-"><span 
+class="small-caps">r</span><span 
+class="small-caps">e</span><span 
+class="small-caps">m</span><span 
+class="small-caps">a</span><span 
+class="small-caps">r</span><span 
+class="small-caps">k</span><span 
+class="small-caps">.</span></span>  </span>Note: You want to use the log$ symbol at the end of a logic block,
+to make sure it only gets flagged when all the previous statements are true.
+   </div>
+   <div class="newtheorem">
+<!--l. 73--><p class="noindent" ><span class="head">
+  <span 
+class="eccc1000-"><span 
+class="small-caps">r</span><span 
+class="small-caps">e</span><span 
+class="small-caps">m</span><span 
+class="small-caps">a</span><span 
+class="small-caps">r</span><span 
+class="small-caps">k</span><span 
+class="small-caps">.</span></span>  </span>As the log$-symbols modify the autoplayer-trace they require the
+autoplayer to be engaged.
+   </div>
+    
+</body></html> 
+
+
+

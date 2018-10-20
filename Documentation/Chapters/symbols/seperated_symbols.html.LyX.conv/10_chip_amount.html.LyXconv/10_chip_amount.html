@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="10_chip_amount.tex"> 
+<link rel="stylesheet" type="text/css" href="10_chip_amount.css"> 
+</head><body 
+>
+   <h3 class="sectionHead"><a 
+ id="x1-1000"></a>Chip Amounts</h3>
+
+   <div class="tabular"> <table id="TBL-1" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col 
+id="TBL-1-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-1"  
+class="td11"> <!--l. 31--><p class="noindent" >Symbol                              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-2"  
+class="td11"> <!--l. 32--><p class="noindent" >Meaning                                                            </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-1"  
+class="td11"> <!--l. 35--><p class="noindent" >balance                              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-2"  
+class="td11"> <!--l. 36--><p class="noindent" >your
+  balance                                                              </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-1"  
+class="td11"> <!--l. 38--><p class="noindent" >balanceatstartofsession          </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-2"  
+class="td11"> <!--l. 39--><p class="noindent" >your
+  first
+  known
+  balance
+  after
+  OpenHoldem
+  connects
+  to
+  a
+  table                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-4-1"  
+class="td11"> <!--l. 41--><p class="noindent" >balance0..balance9                </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-4-2"  
+class="td11"> <!--l. 42--><p class="noindent" >specific
+  player/chair
+  balance                                                              </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-5-1"  
+class="td11"> <!--l. 44--><p class="noindent" >stack0..stack9                      </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-5-2"  
+class="td11"> <!--l. 45--><p class="noindent" >sorted
+  playersplaying
+  balances
+  from
+  0=biggest
+  to
+  9=smallest                                                         </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-6-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-6-1"  
+class="td11"> <!--l. 47--><p class="noindent" >balance_rankx
+  (x=0-9)                              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-6-2"  
+class="td11"> <!--l. 48--><p class="noindent" >ranked
+  list
+  of
+  player
+  balances
+  similar
+  to
+  stack0..stack9,
+  but
+  includes
+  players
+  not
+  currently
+  in
+  hand
+  and
+  includes
+  currentbet
+  for
+  each
+  player
+  as
+  well.
+  rank0
+  has
+  highest
+  balance,
+  rank9
+  smallest                                                             </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-7-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-7-1"  
+class="td11"> <!--l. 52--><p class="noindent" >currentbet                           </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-7-2"  
+class="td11"> <!--l. 53--><p class="noindent" >your
+  current
+  amount
+  of
+  chips
+  in
+  play                                                                  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-8-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-8-1"  
+class="td11"> <!--l. 55--><p class="noindent" >currentbet0..currentbet9        </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-8-2"  
+class="td11"> <!--l. 56--><p class="noindent" >specific
+  player/chair
+  currentbet
+  call
+  the
+  amount
+  you
+  need
+  to
+  call                                                                   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-9-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-9-1"  
+class="td11"> <!--l. 58--><p class="noindent" >bet                                    </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-9-2"  
+class="td11"> <!--l. 59--><p class="noindent" >the
+  amount
+  of
+  a
+  single
+  initial
+  bet
+  or
+  raise
+  for
+  current
+  round                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-10-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-10-1"  
+class="td11"> <!--l. 61--><p class="noindent" >bet1..bet4                           </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-10-2"  
+class="td11"> <!--l. 62--><p class="noindent" >the
+  amount
+  of
+  a
+  single
+  initial
+  bet
+  or
+  raise
+  for
+  round
+  1
+  -
+  round
+  4                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-11-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-11-1"  
+class="td11"> <!--l. 64--><p class="noindent" >pot                                    </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-11-2"  
+class="td11"> <!--l. 65--><p class="noindent" >the
+  total
+  amount
+  of
+  chips
+  in
+  play
+  including
+  player
+  bets                                                                  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-12-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-12-1"  
+class="td11"> <!--l. 67--><p class="noindent" >potcommon                         </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-12-2"  
+class="td11"> <!--l. 68--><p class="noindent" >the
+  total
+  amount
+  of
+  chips
+  in
+  the
+  middle                                                               </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-13-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-13-1"  
+class="td11"> <!--l. 70--><p class="noindent" >potplayer                            </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-13-2"  
+class="td11"> <!--l. 71--><p class="noindent" >the
+  total
+  amount
+  of
+  chips
+  in
+  front
+  of
+  all
+  players                                                               </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-14-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-14-1"  
+class="td11">                           </td> </tr></table>
+
+</div>  
+</body></html> 
+
+
+

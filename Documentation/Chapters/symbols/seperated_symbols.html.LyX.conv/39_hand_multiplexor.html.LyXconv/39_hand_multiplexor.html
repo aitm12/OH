@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="39_hand_multiplexor.tex"> 
+<link rel="stylesheet" type="text/css" href="39_hand_multiplexor.css"> 
+</head><body 
+>
+   <h3 class="sectionHead"><a 
+ id="x1-1000"></a>Hand multiplexor</h3>
+<!--l. 32--><p class="noindent" >The purpose of the hand multiplexor is to transfer control to a specific named
+formula based on your actual 2 card hand. Note that the X&#8217;s and x&#8217;s are not case
+sensitive.
+   <div class="tabular"> <table id="TBL-1" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col 
+id="TBL-1-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-1"  
+class="td11"> <!--l. 38--><p class="noindent" >Symbol                              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-2"  
+class="td11"> <!--l. 39--><p class="noindent" >Meaning                                                            </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-1"  
+class="td11"> <!--l. 42--><p class="noindent" >f$$X                                  </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-2"  
+class="td11"> <!--l. 43--><p class="noindent" >Evaluate
+  the
+  UDF
+  that
+  corresponds
+  to
+  my
+  first
+  card                                                                  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-1"  
+class="td11"> <!--l. 45--><p class="noindent" >f$$XX                                </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-2"  
+class="td11"> <!--l. 46--><p class="noindent" >Evaluate
+  the
+  UDF
+  that
+  corresponds
+  to
+  my
+  first
+  card
+  and
+  second
+  card                                                                  </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-4-1"  
+class="td11"> <!--l. 48--><p class="noindent" >f$$XXx                              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-4-2"  
+class="td11"> <!--l. 49--><p class="noindent" >Evaluate
+  the
+  UDF
+  that
+  corresponds
+  to
+  my
+  first
+  card,
+  second
+  card
+  and
+  suited/unsuited
+  state                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-5-1"  
+class="td11">                           </td> </tr></table></div>
+<!--l. 54--><p class="indent" >   The X&#8217;s in the three symbols will be substituted with your actual hand values at
+time of evaluation. The first "X" will contain the the rank of your highest hole
+card, the second "X" will contain the rank of your lowest hole card, and the
+third "x" will contain either a "s" or "o" depending if your hole cards have
+the same suit or not. The $$ will be replaced with a single dollar sign. For
+example, if my hole cards are AhKh, then "f$$X" will result in "f$A" upon
+evaluation. Similarly, "f$$XX" would result in "f$AK" and "f$$XXx" would result in
+
+"f$AKs".
+<!--l. 66--><p class="indent" >   OpenHoldem will then evaluate the corresponding user defined function and return
+that value for the hand multiplexor symbol. If there is not a corresponding UDF defined
+for a given set of hole cards, then the return result is zero, not an error. The values
+returned by the hand specific UDFs are entirely defined by you; one simple suggestion is
+to have them return 1 for call and 2 for raise; if you do this then your raise formula can
+do this:
+   <!--l. 74-->
+   <div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x1-1001r1"></a></span>||&#x00A0;[&#x00A0;f$$XXx&#x00A0;&#x003E;=&#x00A0;2&#x00A0;]&#x00A0;//hand&#x00A0;specific&#x00A0;formula&#x00A0;calc
+   </div>
+    
+</body></html> 
+
+
+

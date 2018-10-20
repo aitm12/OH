@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="37_messagebox_with_info.tex"> 
+<link rel="stylesheet" type="text/css" href="37_messagebox_with_info.css"> 
+</head><body 
+>
+   <h3 class="sectionHead"><a 
+ id="x1-1000"></a>MessageBoxes with Info</h3>
+<!--l. 27--><p class="noindent" >In addition to logging it might be useful to notify the user at run-time and pause
+script-execution, mainly in a debugging session. For this usecase OpenHoldem provides a
+symbol msgbox$TEXT, that &#8212; surprise &#8212; will show a messagebox with text. As the
+character-set in symbols is slightly limited the following replacements will take
+place.
+           <ul class="itemize1">
+        <li class="itemize">_B will be replaced by a blank
+           </li>
+        <li class="itemize">_C will be replaced by a comma
+           </li>
+        <li class="itemize">_D will be replaced by a dot
+           </li>
+        <li class="itemize">_N will be replaced by a new-line
+           </li>
+        <li class="itemize">_U will be replaced by a underscore</li></ul>
+<!--l. 39--><p class="noindent" >The symbol msgbox$TEXT will evaluate to 0. An example: <!--l. 40-->
+   <div class="lstlisting" id="listing-1"><span class="label"><a 
+ id="x1-1001r1"></a></span>##f$preflop##&#x00A0;<br /><span class="label"><a 
+ id="x1-1002r2"></a></span>WHEN&#x00A0;Others&#x00A0;RETURN&#x00A0;(Call&#x00A0;+&#x00A0;msgbox$WOOHOO_NPreflop_Bworks_D)&#x00A0;FORCE
+   </div>
+<!--l. 45--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+
+
+<!--l. 46--><p class="noindent" ><img 
+src="37_messagebox_with_info0x.png" alt="PIC" class="graphics"><!--tex4ht:graphics  
+name="37_messagebox_with_info0x.png" src="0C__Users_tiltmonster_Documents_openholdembot-m___ocumentation_Chapters_symbols_Images_msgbox.JPG"  
+-->
+
+<!--l. 47--><p class="indent" >   </div><hr class="endfigure">
+    
+</body></html> 
+
+
+

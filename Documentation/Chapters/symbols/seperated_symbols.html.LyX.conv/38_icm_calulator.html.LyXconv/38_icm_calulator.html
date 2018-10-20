@@ -1,0 +1,855 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="38_icm_calulator.tex"> 
+<link rel="stylesheet" type="text/css" href="38_icm_calulator.css"> 
+</head><body 
+>
+   <h3 class="sectionHead"><a 
+ id="x1-1000"></a>ICM calculator</h3>
+<!--l. 40--><p class="noindent" >An overview of basic ICM push/fold decisions and how they work with OpenHoldem can
+be found here: <a 
+href="http://www.maxinmontreal.com/wiki/index.php5?title=ICM" class="url" ><span 
+class="ectt-1000">http://www.maxinmontreal.com/wiki/index.php5?title=ICM</span></a>.
+   <div class="newtheorem">
+<!--l. 42--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1001r1"></a>
+  <span 
+class="eccc1000-"><span 
+class="small-caps">r</span><span 
+class="small-caps">e</span><span 
+class="small-caps">m</span><span 
+class="small-caps">a</span><span 
+class="small-caps">r</span><span 
+class="small-caps">k</span> </span>1<span 
+class="eccc1000-"><span 
+class="small-caps">.</span></span>  </span>UTG in a symbols name does always mean the first player after
+BB at a full-ring table with 10 players. If less players do actually sit at the table,
+the first position (UTG) will be ignored and the first player will be named UTG+1
+(or UTG+2, etc.).
+   </div>
+   <div class="newtheorem">
+<!--l. 51--><p class="noindent" ><span class="head">
+  <span 
+class="eccc1000-"><span 
+class="small-caps">r</span><span 
+class="small-caps">e</span><span 
+class="small-caps">m</span><span 
+class="small-caps">a</span><span 
+class="small-caps">r</span><span 
+class="small-caps">k</span><span 
+class="small-caps">.</span></span>  </span>The ICM symbols will always assume, that you win against the
+player with the smallest stack or lose against the player with the biggest stack of
+the remaining non-folded players (or against N players with the N smallest stacks),
+so the ICM-symbols will be slightly too pessimistic in multiway-situations. For
+headsup (including blind-battle) and against concrete players (e.g. icm_alliwinUTG
+) the symbols are accurate.
+   </div>
+<a 
+ id="x1-1002r1"></a>   <!--l. 61--><div class="longtable"> <table id="TBL-1" class="longtable" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col 
+id="TBL-1-2"></colgroup>
+
+<tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-1"  
+class="td11">
+ <!--l. 61--><p class="noindent" >Symbol                              </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-1-2"  
+class="td11">
+ <!--l. 62--><p class="noindent" >Description                                                         </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-2-1"  
+class="td11">
+ <!--l. 64--><p class="noindent" >                         </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-1"  
+class="td11">                          </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-3-2"  
+class="td11"></td></tr>
+<tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-4-1"  
+class="td11">
+ <!--l. 66--><p class="noindent" >icm                                   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-4-2"  
+class="td11">
+ <!--l. 67--><p class="noindent" >my
+  tournament
+  equity
+  before
+  any
+  action
+  is
+  considered
+  (just
+  balances)                                                            </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-5-1"  
+class="td11">
+ <!--l. 69--><p class="noindent" >icm_fold                           </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-5-2"  
+class="td11">
+ <!--l. 70--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  fold                                                                   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-6-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-6-1"  
+class="td11">
+ <!--l. 72--><p class="noindent" >icm_callwin                       </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-6-2"  
+class="td11">
+ <!--l. 73--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  call
+  and
+  win
+  (conservativly:
+  against
+  the
+  smallest
+  remaining
+  stack)                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-7-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-7-1"  
+class="td11">
+ <!--l. 76--><p class="noindent" >icm_calllose                       </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-7-2"  
+class="td11">
+ <!--l. 77--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  call
+  and
+  lose
+  (conservativly:
+  against
+  the
+  largest
+  remaining
+  stack)                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-8-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-8-1"  
+class="td11">
+ <!--l. 80--><p class="noindent" >icm_calltie                        </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-8-2"  
+class="td11">
+ <!--l. 81--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  call
+  and
+  tie                                                                    </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-9-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-9-1"  
+class="td11">
+ <!--l. 83--><p class="noindent" >icm_alliwin0..icm_alliwin9   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-9-2"  
+class="td11">
+ <!--l. 84--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  0
+  -
+  9
+  callers                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-10-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-10-1"  
+class="td11">
+ <!--l. 86--><p class="noindent" >icm_allilose0..icm_allilose9   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-10-2"  
+class="td11">
+ <!--l. 87--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  lose
+  against
+  0
+  -
+  9
+  callers                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-11-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-11-1"  
+class="td11">
+ <!--l. 89--><p class="noindent" >icm_alliwinSB                    </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-11-2"  
+class="td11">
+ <!--l. 90--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  the
+  small
+  blind                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-12-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-12-1"  
+class="td11">
+ <!--l. 92--><p class="noindent" >icm_alliwinBB                   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-12-2"  
+class="td11">
+ <!--l. 93--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  the
+  big
+  blind                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-13-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-13-1"  
+class="td11">
+ <!--l. 95--><p class="noindent" >icm_alliwinUTG                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-13-2"  
+class="td11">
+ <!--l. 96--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  UTG                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-14-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-14-1"  
+class="td11">
+ <!--l. 98--><p class="noindent" >icm_alliwinUTG1               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-14-2"  
+class="td11">
+ <!--l. 99--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  UTG
+  +
+  1                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-15-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-15-1"  
+class="td11">
+ <!--l. 101--><p class="noindent" >icm_alliwinUTG2               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-15-2"  
+class="td11">
+ <!--l. 102--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  UTG
+  +
+  2                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-16-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-16-1"  
+class="td11">
+ <!--l. 104--><p class="noindent" >icm_alliwinUTG3               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-16-2"  
+class="td11">
+ <!--l. 105--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  UTG
+  +
+  3                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-17-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-17-1"  
+class="td11">
+ <!--l. 107--><p class="noindent" >icm_alliwinUTG4               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-17-2"  
+class="td11">
+ <!--l. 108--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  UTG
+  +
+  4                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-18-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-18-1"  
+class="td11">
+ <!--l. 110--><p class="noindent" >icm_alliwinUTG5               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-18-2"  
+class="td11">
+ <!--l. 111--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  UTG
+  +
+  5                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-19-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-19-1"  
+class="td11">
+ <!--l. 113--><p class="noindent" >icm_alliwinUTG6               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-19-2"  
+class="td11">
+ <!--l. 114--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  UTG
+  +
+  6
+  (cut-off)                                                             </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-20-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-20-1"  
+class="td11">
+ <!--l. 116--><p class="noindent" >icm_alliwinCO                   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-20-2"  
+class="td11">
+ <!--l. 117--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  the
+  cut-off                                                               </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-21-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-21-1"  
+class="td11">
+ <!--l. 119--><p class="noindent" >icm_alliwinD                     </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-21-2"  
+class="td11">
+ <!--l. 120--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  the
+  dealer                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-22-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-22-1"  
+class="td11">
+ <!--l. 122--><p class="noindent" >icm_allitieSB                     </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-22-2"  
+class="td11">
+ <!--l. 123--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  tie
+  against
+  the
+  small
+  blind                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-23-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-23-1"  
+class="td11">
+ <!--l. 125--><p class="noindent" >icm_allitieBB                     </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-23-2"  
+class="td11">
+ <!--l. 126--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  tie
+  against
+  the
+  big
+  blind                                                                 </td>
+
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-24-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-24-1"  
+class="td11">
+ <!--l. 127--><p class="noindent" >                         </td>
+
+   </tr>
+<tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-25-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-25-1"  
+class="td11">
+ <!--l. 128--><p class="noindent" >icm_allitieUTG                  </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-25-2"  
+class="td11">
+ <!--l. 129--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  tie
+  against
+  UTG                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-26-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-26-1"  
+class="td11">
+ <!--l. 131--><p class="noindent" >icm_allitieUTG1                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-26-2"  
+class="td11">
+ <!--l. 132--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  tie
+  against
+  UTG
+  +
+  1                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-27-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-27-1"  
+class="td11">
+ <!--l. 134--><p class="noindent" >icm_allitieUTG2                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-27-2"  
+class="td11">
+ <!--l. 135--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  tie
+  against
+  UTG
+  +
+  2                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-28-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-28-1"  
+class="td11">
+ <!--l. 137--><p class="noindent" >icm_allitieUTG3                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-28-2"  
+class="td11">
+ <!--l. 138--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  tie
+  against
+  UTG
+  +
+  3                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-29-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-29-1"  
+class="td11">
+ <!--l. 140--><p class="noindent" >icm_allitieUTG4                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-29-2"  
+class="td11">
+ <!--l. 141--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  tie
+  against
+  UTG
+  +
+  4                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-30-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-30-1"  
+class="td11">
+ <!--l. 143--><p class="noindent" >icm_allitieUTG5                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-30-2"  
+class="td11">
+ <!--l. 144--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  tie
+  against
+  UTG
+  +
+  5                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-31-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-31-1"  
+class="td11">
+ <!--l. 146--><p class="noindent" >icm_allitieUTG6                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-31-2"  
+class="td11">
+ <!--l. 147--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  tie
+  against
+  UTG
+  +
+  6
+  (cut-off)                                                             </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-32-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-32-1"  
+class="td11">
+ <!--l. 149--><p class="noindent" >icm_allitieCO                    </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-32-2"  
+class="td11">
+ <!--l. 150--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  tie
+  against
+  the
+  cut-off                                                               </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-33-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-33-1"  
+class="td11">
+ <!--l. 152--><p class="noindent" >icm_allitieD                       </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-33-2"  
+class="td11">
+ <!--l. 153--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  win
+  against
+  the
+  dealer                                                                </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-34-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-34-1"  
+class="td11">
+ <!--l. 155--><p class="noindent" >icm_alliloseSB                    </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-34-2"  
+class="td11">
+ <!--l. 156--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  lose
+  against
+  the
+  small
+  blind                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-35-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-35-1"  
+class="td11">
+ <!--l. 158--><p class="noindent" >icm_alliloseBB                   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-35-2"  
+class="td11">
+ <!--l. 159--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  lose
+  against
+  the
+  big
+  blind                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-36-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-36-1"  
+class="td11">
+ <!--l. 161--><p class="noindent" >icm_alliloseUTG                 </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-36-2"  
+class="td11">
+ <!--l. 162--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  lose
+  against
+  UTG                                                                 </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-37-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-37-1"  
+class="td11">
+ <!--l. 164--><p class="noindent" >icm_alliloseUTG1               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-37-2"  
+class="td11">
+ <!--l. 165--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  lose
+  against
+  UTG
+  +
+  1                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-38-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-38-1"  
+class="td11">
+ <!--l. 167--><p class="noindent" >icm_alliloseUTG2               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-38-2"  
+class="td11">
+ <!--l. 168--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  lose
+  against
+  UTG
+  +
+  2                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-39-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-39-1"  
+class="td11">
+ <!--l. 170--><p class="noindent" >icm_alliloseUTG3               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-39-2"  
+class="td11">
+ <!--l. 171--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  lose
+  against
+  UTG
+  +
+  3                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-40-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-40-1"  
+class="td11">
+ <!--l. 173--><p class="noindent" >icm_alliloseUTG4               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-40-2"  
+class="td11">
+ <!--l. 174--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  lose
+  against
+  UTG
+  +
+  4                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-41-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-41-1"  
+class="td11">
+ <!--l. 176--><p class="noindent" >icm_alliloseUTG5               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-41-2"  
+class="td11">
+ <!--l. 177--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  lose
+  against
+  UTG
+  +
+  5                                                                      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-42-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-42-1"  
+class="td11">
+ <!--l. 179--><p class="noindent" >icm_alliloseUTG6               </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-42-2"  
+class="td11">
+ <!--l. 180--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  lose
+  against
+  UTG
+  +
+  6
+  (cut-off)                                                             </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-43-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-43-1"  
+class="td11">
+ <!--l. 182--><p class="noindent" >icm_alliloseCO                   </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-43-2"  
+class="td11">
+ <!--l. 183--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  lose
+  against
+  the
+  cut-off                                                               </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-44-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-44-1"  
+class="td11">
+ <!--l. 185--><p class="noindent" >icm_alliloseD                     </td><td  style="white-space:wrap; text-align:left;" id="TBL-1-44-2"  
+class="td11">
+ <!--l. 186--><p class="noindent" >my
+  tournament
+  equity
+  if
+  I
+  push
+  all-in
+  and
+  lose
+  against
+  the
+  dealer                                                                </td>
+
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-45-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-45-1"  
+class="td11">
+ <!--l. 187--><p class="noindent" >                         </td>
+   </tr>
+<tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-46-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-46-1"  
+class="td11">                          </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-47-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-47-1"  
+class="td11">                          </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-48-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-48-1"  
+class="td11">
+ <!--l. 188--><p class="noindent" >                         </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-49-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-49-1"  
+class="td11">
+ <!--l. 188--><p class="noindent" >                         </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-50-"><td  style="white-space:wrap; text-align:left;" id="TBL-1-50-1"  
+class="td11">
+ <!--l. 188--><p class="noindent" >                         </td>
+   </tr>
+   </table></div>
+    
+</body></html> 
+
+
+
